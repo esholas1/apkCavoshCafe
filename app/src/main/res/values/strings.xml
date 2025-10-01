@@ -7,4 +7,12 @@
     <string name="menu">menu</string>
     <string name="perfil">perfil</string>
     <string name="carrito">Carrito</string>
+    <string name="empezar">Empezar</string>
+    <string name="login_header">Let\'s get you signed in!</string>
+    <string name="login">Login</string>
+    <string name="registrar">Registrar</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="correo">Correo</string>
+    <string name="passwordd">Contraseña</string>
+    <string name="olvidaste_passwordd">¿ Olvidaste tu contraseña ?</string>
 </resources>
