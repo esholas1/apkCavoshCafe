@@ -25,7 +25,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="100dp"
         android:orientation="vertical" >
@@ -37,7 +37,7 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnIngresar"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
@@ -70,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            app:endIconMode="clear_text"
             app:hintEnabled="false"
             >
 
@@ -119,18 +120,105 @@
             android:textStyle="bold"/>
 
         <Button
-            android:id="@+id/btnEmpezar"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:layout_marginTop="30dp"
             android:background="@drawable/sh_bg_btn_gunmetal"
-            android:text="@string/ingresar"
+            android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/carmine_pink"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ingresar_con"
+                android:textColor="@color/police_blue"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="end"
+                android:background="@color/carmine_pink"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/ivFacebook"
+                android:layout_width="108dp"
+                android:layout_height="84dp"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="@string/content_description"
+                android:padding="16dp"
+                android:src="@drawable/ic_facebookazul"/>
+
+            <ImageView
+                android:id="@+id/ivGoogle"
+                android:layout_width="108dp"
+                android:layout_height="84dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="@string/content_description"
+                android:padding="16dp"
+                android:src="@drawable/ic_google"/>
+
+            <ImageView
+                android:id="@+id/ivApple"
+                android:layout_width="108dp"
+                android:layout_height="84dp"
+                android:layout_gravity="end"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="@string/content_description"
+                android:padding="16dp"
+                android:src="@drawable/ic_apple"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="30dp"
+        android:text="¿ No tienes una cuenta ?"
+        android:textColor="@color/police_blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Registrate ahora"
+        android:textColor="@color/carmine_pink"
+        android:textStyle="bold"/>
 
 </FrameLayout>

@@ -15,4 +15,13 @@
     <string name="correo">Correo</string>
     <string name="passwordd">Contraseña</string>
     <string name="olvidaste_passwordd">¿ Olvidaste tu contraseña ?</string>
+    <string name="content_description">contentDescription</string>
+    <string name="ingresar_con">Ingresar con</string>
+    <string name="login1">Login</string>
+    <string name="let_s_get_you_registered">Let\'s get you registered!</string>
+    <string name="confirmar_contrasena">Confirmar contraseña</string>
+    <string name="nombres">Nombres</string>
+    <string name="inicia_sesion">Inicia sesión</string>
+    <string name="ya_estas_registrado">¿ Ya estás registrado ?</string>
+    <string name="registrar_con">Registrar con</string>
 </resources>
