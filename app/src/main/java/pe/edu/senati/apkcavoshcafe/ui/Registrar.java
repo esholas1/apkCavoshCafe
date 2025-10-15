@@ -40,5 +40,18 @@ public class Registrar extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
         navController = Navigation.findNavController( view );
+
+        binding.btnGuardar.setOnClickListener( v -> btnGuardar_Click());
+    }
+
+    private void btnGuardar_Click() {
+        String sCorreo = binding.tilCorreo.getEditText().getText().toString().trim();
+
+        //api -> guardar nombres, corero y passwordd, enviar correo con código validación
+
+        Bundle bundle = new Bundle();
+        bundle.putString("validar", "registrar");
+        bundle.putString("correo", sCorreo);
+        navController.navigate( R.id.navigation_validar, bundle);
     }
 }

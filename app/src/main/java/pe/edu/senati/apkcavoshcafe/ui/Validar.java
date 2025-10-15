@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import pe.edu.senati.apkcavoshcafe.R;
 import pe.edu.senati.apkcavoshcafe.databinding.FragmentVerificarBinding;
 
-public class Verificar extends Fragment {
+public class Validar extends Fragment {
     FragmentVerificarBinding binding;
     Context context;
     View view;
@@ -40,5 +40,25 @@ public class Verificar extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
         navController = Navigation.findNavController( view );
+
+        binding.btnValidar.setOnClickListener( v-> btnValidar_Click());
+    }
+
+    private void btnValidar_Click() {
+        String sValidar = getArguments().getString("validar");
+        String sCorreo = getArguments().getString("correo");
+        String sCodigo = binding.tilCodigo.getEditText().getText().toString().trim();
+
+        //api -> Validar el código para el correo y "validar"
+
+        if(sValidar.equals("passwordd") ) {
+            Bundle bundle = new Bundle();
+            bundle.putString("correo", sCorreo);
+            navController.navigate(R.id.navigation_passwordd);
+        }
+        else if( sValidar.equals("registrar")){
+            //registrar usuario en bd local
+            navController.navigate( R.id.navigation_inicio);
+        }
     }
 }

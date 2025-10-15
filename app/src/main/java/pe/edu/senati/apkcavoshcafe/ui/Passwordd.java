@@ -15,9 +15,10 @@ import android.view.ViewGroup;
 
 import pe.edu.senati.apkcavoshcafe.R;
 import pe.edu.senati.apkcavoshcafe.databinding.FragmentLoginBinding;
+import pe.edu.senati.apkcavoshcafe.databinding.FragmentPassworddBinding;
 
-public class Login extends Fragment {
-    FragmentLoginBinding binding;
+public class Passwordd extends Fragment {
+    FragmentPassworddBinding binding;
     Context context;
     View view;
     NavController navController;
@@ -30,7 +31,7 @@ public class Login extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentLoginBinding.inflate(inflater, container, false);
+        binding = FragmentPassworddBinding.inflate(inflater, container, false);
         return view = binding.getRoot();
 
     }
@@ -41,13 +42,19 @@ public class Login extends Fragment {
         context = getContext();
         navController = Navigation.findNavController( view );
 
-        binding.tvOlvidastes.setOnClickListener( v -> navController.navigate( R.id.navigation_olvidastes));
-        binding.tvRegistrar.setOnClickListener( v -> navController.navigate( R.id.navigation_registrar));
-        binding.btnRegistrar.setOnClickListener( v -> navController.navigate( R.id.navigation_registrar));
-        binding.btnLogin.setOnClickListener( v -> btnLogin_Click());
+        binding.tvLogin.setOnClickListener( v -> navController.navigate( R.id.navigation_login));
+        binding.btnActualizar.setOnClickListener( v -> btnActualizar_Click());
     }
 
-    private void btnLogin_Click() {
+    private void btnActualizar_Click() {
+        String sCorreo = getArguments().getString("correo");
 
+        String sPasswordd = binding.tilPasswordd.getEditText().getText().toString().trim();
+        String sPassworddConfirmar = binding.tilPassworddConfirmar.getEditText().getText().toString().trim();
+
+        // api -> actualizar passwordd para el correo
+        // mensaje "Actualizacion exitosa"
+
+        navController.navigate( R.id.navigation_login);
     }
 }

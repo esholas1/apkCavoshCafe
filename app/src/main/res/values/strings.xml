@@ -24,4 +24,10 @@
     <string name="inicia_sesion">Inicia sesión</string>
     <string name="ya_estas_registrado">¿ Ya estás registrado ?</string>
     <string name="registrar_con">Registrar con</string>
+    <string name="verificar_registro">Verificar registro</string>
+    <string name="verificar">Verificar</string>
+    <string name="cambiar_contrasena">Cambiar contraseña</string>
+    <string name="recuperar_contrasena">Recuperar contraseña</string>
+    <string name="enviar">Enviar</string>
+    <string name="guardar">Guardar</string>
 </resources>

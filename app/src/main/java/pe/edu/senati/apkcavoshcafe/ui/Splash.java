@@ -32,7 +32,6 @@ public class Splash extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentSplashBinding.inflate(inflater, container, false);
         return view = binding.getRoot();
-
     }
 
     @Override

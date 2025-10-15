@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_navigation_login_to_navigation_inicio"
             app:destination="@id/navigation_inicio" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_olvidastes"
+            app:destination="@id/navigation_olvidastes" />
     </fragment>
     <fragment
         android:id="@+id/navigation_registrar"
@@ -32,13 +35,17 @@
         tools:layout="@layout/fragment_registrar" >
         <action
             android:id="@+id/action_navigation_registrar_to_navigation_verificar"
-            app:destination="@id/navigation_verificar" />
+            app:destination="@id/navigation_validar" />
     </fragment>
     <fragment
-        android:id="@+id/navigation_verificar"
-        android:name="pe.edu.senati.apkcavoshcafe.ui.Verificar"
-        android:label="fragment_verificar"
-        tools:layout="@layout/fragment_verificar" />
+        android:id="@+id/navigation_validar"
+        android:name="pe.edu.senati.apkcavoshcafe.ui.Validar"
+        android:label="fragment_validar"
+        tools:layout="@layout/fragment_validar">
+        <action
+            android:id="@+id/action_navigation_verificar_to_navigation_passwordd"
+            app:destination="@id/navigation_passwordd" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_inicio"
         android:name="pe.edu.senati.apkcavoshcafe.ui.Inicio"
@@ -95,4 +102,18 @@
         android:name="pe.edu.senati.apkcavoshcafe.ui.MenuProductoPersonalizar"
         android:label="fragment_menu_producto_personalizar"
         tools:layout="@layout/fragment_menu_producto_personalizar" />
+    <fragment
+        android:id="@+id/navigation_passwordd"
+        android:name="pe.edu.senati.apkcavoshcafe.ui.Passwordd"
+        android:label="fragment_passwordd"
+        tools:layout="@layout/fragment_passwordd" />
+    <fragment
+        android:id="@+id/navigation_olvidastes"
+        android:name="pe.edu.senati.apkcavoshcafe.ui.Olvidastes"
+        android:label="fragment_olvidastes"
+        tools:layout="@layout/fragment_olvidastes" >
+        <action
+            android:id="@+id/action_navigation_olvidastes_to_navigation_verificar"
+            app:destination="@id/navigation_validar" />
+    </fragment>
 </navigation>
